@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-gray-900/60 backdrop-blur-sm border border-white/5;
+  }
+  
+  .purple-gradient {
+    @apply bg-gradient-to-r from-purple-500/90 to-purple-600/90;
+  }
+  
+  .hover-scale {
+    @apply transition-all duration-300 hover:scale-[1.02];
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900/50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-purple-500/70 to-purple-600/70 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply from-purple-400/80 to-purple-500/80;
+}
